@@ -208,45 +208,6 @@ final class GameViewModel: ObservableObject {
         }
     }
 
-//    func determineUltraHardComputerMovePosition(in moves: [Move?]) -> Int {
-//        // First, check if the computer can win on the next move
-//        if let winningMove = winningMove(for: .computer) {
-//            return winningMove
-//        }
-//
-//        // If the human player can win on the next move, block it
-//        if let blockingMove = winningMove(for: .human) {
-//            return blockingMove
-//        }
-//
-//        // Then, evaluate if there is a more advanced strategy than just taking the center square
-//        // Check if the computer can create a "double threat"
-//        if let doubleThreatMove = findDoubleThreatMove(for: .computer) {
-//            return doubleThreatMove
-//        }
-//
-//        // If the computer can't create a "double threat", check if it can block the human's "double threat"
-//        if let blockDoubleThreat = findDoubleThreatMove(for: .human) {
-//            return blockDoubleThreat
-//        }
-//
-//        // If there are no "double threats", check if the center square is available
-//        if let centerSquare = blockCenterSquare(in: moves) {
-//            return centerSquare
-//        }
-//
-//        // If the center square is taken, take a corner square
-//        let corners = [0, 2, 6, 8]
-//        for corner in corners {
-//            if !isSquareOccupied(in: moves, forIndex: corner) {
-//                return corner
-//            }
-//        }
-//
-//        // If no strategic moves are available, make a random move on any free square
-//        return determinateSimpleComputerMovePosition(in: moves)
-//    }
-
     func checkWinCondition(for player: Player, in moves: [Move?]) -> Bool {
 
         let playerMoves = moves.compactMap { $0 }.filter { $0.player == player }
