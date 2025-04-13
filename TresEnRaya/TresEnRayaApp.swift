@@ -11,7 +11,7 @@ import SwiftUI
 struct TresEnRayaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView()
         }
     }
 }
